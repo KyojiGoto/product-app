@@ -26,6 +26,17 @@ ng serve
 ```
 Once the server is running, open your browser and navigate to `http://localhost:4200/`.
 
+The app is dynamic, and the layout works well on mobile devices. To test the site on your mobile device, ensure it is on the same network as the machine running the Angular app. Instead of running the above command, use:
+```bash
+ng serve --host=0.0.0.0
+```
+Once the server is running, there should be a second link, like the following:
+```bash
+  ➜  Local:   http://localhost:4200/
+  ➜  Network: http://10.0.0.235:4200/
+```
+Open your browser on your mobile device, and navigate to the second link. The value of of the ip address will likely be different to above.
+
 ## App Overview
 
 ```
