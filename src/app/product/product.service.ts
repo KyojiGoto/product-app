@@ -12,7 +12,38 @@ import { Product } from './product';
   providedIn: 'root'
 })
 export class ProductService {
-  protected productList: Product[] = [];
+  protected productList: Product[] = [
+    {
+      'id': 0,
+      'name': 'Test',
+      'price': 10.99,
+      'description': 'Test',
+    },
+    {
+      'id': 1,
+      'name': 'Test1',
+      'price': 11.99,
+      'description': 'Test1',
+    },
+    {
+      'id': 2,
+      'name': 'Test2',
+      'price': 12.99,
+      'description': 'Test2',
+    },
+    {
+      'id': 3,
+      'name': 'Test3',
+      'price': 13.99,
+      'description': 'Test3',
+    },
+    {
+      'id': 4,
+      'name': 'Test4',
+      'price': 14.99,
+      'description': 'Test4',
+    },
+  ];
 
   constructor() { }
   
