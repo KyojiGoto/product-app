@@ -1,0 +1,22 @@
+.product {
+    background: var(--accent-color);
+    border-radius: 30px;
+    padding-bottom: 30px;
+}
+
+.product-name {
+    color: var(--primary-color);
+    padding: 15px 20px 0 20px;
+}
+
+.product-price {
+    padding: 10px 20px 0 20px;
+}
+
+.product-description {
+    padding: 10px 20px 10px 20px;
+}
+
+.product-button {
+    margin-left: 70%;
+}
