@@ -27,6 +27,10 @@ export class ProductCardComponent {
   @Input() product!:Product;
   @Output() viewDetail = new EventEmitter<number>();
 
+  /**
+   * Emits an event with the current product id.
+   * This is used by the parent component (ProductList) to handle routing.
+   */
   onViewDetail() {
     this.viewDetail.emit(this.product.id);
   }

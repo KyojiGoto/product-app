@@ -37,6 +37,11 @@ export class ProductListComponent {
     });
   }
 
+  /**
+   * Uses the Router service to route to the product object's detail view.
+   *
+   * @param id - The id of the product.
+   */
   routeToProductDetailView(id: number) {
     this.router.navigate(['products', id]);
   }
