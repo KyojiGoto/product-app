@@ -19,11 +19,16 @@ import { ProductService } from '../product.service';
       <p>Product not found</p>
     } 
     @else {
-      <article>
-        <section class="product-description">
-          <h2 class="product-heading">{{ product.name }}</h2>
-          <h3 class="product-price">{{ product.price | currency }}</h3>
-          <p class="product-description">{{ product.description }}</p>
+      <article class='product-card'>
+        <section class='product-content'>
+          <div class='product-image-container'>
+            <img class='product-image' [src]='product.image' alt='Image of {{product.name}}'>
+          </div>
+          <div class='product-info'>
+            <h2 class='product-heading'>{{ product.name }}</h2>
+            <h3 class='product-price'>{{ product.price | currency }}</h3>
+            <p class='product-description'>{{ product.description }}</p>
+          </div>
         </section>
       </article>
     }
