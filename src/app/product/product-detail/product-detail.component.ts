@@ -4,6 +4,13 @@ import { ActivatedRoute } from '@angular/router';
 import { Product } from '../product';
 import { ProductService } from '../product.service';
 
+/**
+ * This component displays a product object's details.
+ *
+ * @remarks
+ * The product object is provided through the ProductService.
+ * This component uses the current route to get the product id.
+ */
 @Component({
   selector: 'app-product-detail',
   imports: [CurrencyPipe],
@@ -28,6 +35,10 @@ export class ProductDetailComponent {
   productService: ProductService = inject(ProductService);
   product: Product | undefined;
 
+  /** 
+   * Subscribe to the product service when component is initialized
+   * Extracts the id from the current route
+   */
   ngOnInit() {
     const productId = Number(this.route.snapshot.params['id']);
     this.productService.getProductById(productId).subscribe((data: Product | undefined) => {
