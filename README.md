@@ -63,7 +63,7 @@ The product interface provides a JSON structure for the product object.
 
 This is used by the product service to store hardcoded product objects in a list. This list is served to various components through two public methods - one to serve all products, and another to serve a single product identified by id number. The service uses RxJS to simulate async fetch requests.
 
-The product list component is responsible for querying the service to get all products, display it's contents through the product card component, and handle routing to the details page.
+The product list component is responsible for querying the service to get all products, display its contents through the product card component, and handle routing to the details page.
 
 The product card component provides structure to populate the product object into. It also has an EventEmitter to notify the product list that it should handle routing.
 
