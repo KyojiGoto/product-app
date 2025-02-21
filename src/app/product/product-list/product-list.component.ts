@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductCardComponent } from '../product-card/product-card.component';
 import { Product } from '../product';
 import { ProductService } from '../product.service';
@@ -8,7 +9,7 @@ import { ProductService } from '../product.service';
  *
  * @remarks
  * The product objects are provided through the ProductService. 
- * This component should handle emitted routing events from any card component.
+ * This component handles emitted routing events from product card components.
  */
 @Component({
   selector: 'app-product-list',
@@ -23,6 +24,7 @@ import { ProductService } from '../product.service';
   styleUrl: './product-list.component.css'
 })
 export class ProductListComponent {
+  router: Router = inject(Router);
   productService: ProductService = inject(ProductService);
   productList: Product[] = []
 
@@ -35,8 +37,7 @@ export class ProductListComponent {
     });
   }
 
-  // TODO: Route to detail view
   routeToProductDetailView(id: number) {
-    console.log(id);
+    this.router.navigate(['products', id]);
   }
 }
